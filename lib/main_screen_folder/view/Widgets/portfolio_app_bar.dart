@@ -68,7 +68,7 @@ class PortfolioAppBar extends StatelessWidget implements PreferredSizeWidget {
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 6.sp,
+            fontSize: 20,
             fontFamily: "Source",
             color: ctrl.activeTab.value == label
                 ? Color(0xfff4623a)

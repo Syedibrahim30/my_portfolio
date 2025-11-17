@@ -144,6 +144,7 @@ class PortfolioScreen extends StatelessWidget {
       decoration: BoxDecoration(
         color: ctrl.toggle.value ? Colors.white : const Color(0xff111827),
         borderRadius: BorderRadius.circular(18.r),
+        border: Border.all(color: Colors.white24, width: 1.5),
         boxShadow: [
           BoxShadow(
             color: Colors.white.withOpacity(0.08),
@@ -231,6 +232,8 @@ class PortfolioScreen extends StatelessWidget {
               ? const Color(0xfff9fafb)
               : const Color(0xff1f2937),
           borderRadius: BorderRadius.circular(18),
+          border: Border.all(color: Colors.white24, width: 1.5),
+
           boxShadow: [
             BoxShadow(
               color: Colors.black.withOpacity(0.08),

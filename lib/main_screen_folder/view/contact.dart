@@ -31,7 +31,19 @@ class Contact extends StatelessWidget {
         Padding(
           padding: EdgeInsets.symmetric(horizontal: .1.sw),
           child: Text(
-            "LET'S WORK TOGETHER",
+            "LET'S WORK",
+            style: TextStyle(
+              fontFamily: "Source",
+              fontSize: 25.sp,
+              color: Color(0xfff4623a),
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+        ),
+        Padding(
+          padding: EdgeInsets.symmetric(horizontal: .1.sw),
+          child: Text(
+            "TOGETHER",
             style: TextStyle(
               fontFamily: "Source",
               fontSize: 25.sp,

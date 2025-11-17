@@ -13,14 +13,15 @@ class Skills extends StatelessWidget {
     {"img": "assets/images/dart_logo.png", "name": "Dart"},
     {"img": "assets/images/flutter_logo.png", "name": "Flutter"},
     {"img": "assets/images/getx_logo.png", "name": "GetX"},
-    {"img": "assets/images/bloc_logo.png", "name": "Bloc"},
+    // {"img": "assets/images/bloc_logo.png", "name": "Bloc"},
     {"img": "assets/images/firebase_logo.png", "name": "Firebase"},
+    {"img": "assets/images/rest_api.png", "name": "RestApi"},
     {"img": "assets/images/gitlab_logo.png", "name": "GitLab"},
     {"img": "assets/images/git_logo.png", "name": "Git"},
     {"img": "assets/images/github_logo.png", "name": "GitHub"},
     {"img": "assets/images/figma_logo.png", "name": "Figma"},
-    {"img": "assets/images/android_logo.png", "name": "Android"},
-    {"img": "assets/images/ios_logo.png", "name": "iOS"},
+    // {"img": "assets/images/android_logo.png", "name": "Android"},
+    // {"img": "assets/images/ios_logo.png", "name": "iOS"},
     {"img": "assets/images/node_logo.png", "name": "Node.js"},
     {"img": "assets/images/postgre_logo.png", "name": "PostgreSQL"},
   ];
@@ -30,9 +31,9 @@ class Skills extends StatelessWidget {
     ctrl.initSkillsHover(skills.length); // 🔥 initialize hover list
 
     double screenWidth = MediaQuery.of(context).size.width;
-    int crossAxisCount = (screenWidth ~/ 150).clamp(2, 6);
+    int crossAxisCount = (screenWidth ~/ 150).clamp(2, 5);
     double spacing = 9.w;
-    double imageHeight = .05.sh;
+    double imageHeight = .06.sh;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -110,9 +111,9 @@ class Skills extends StatelessWidget {
                         ),
 
                         child: Padding(
-                          padding: EdgeInsets.all(7.w),
+                          padding: EdgeInsets.all(6.sp),
                           child: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
                               SizedBox(
                                 height: imageHeight,
@@ -121,7 +122,6 @@ class Skills extends StatelessWidget {
                                   fit: BoxFit.fill,
                                 ),
                               ),
-                              Gap(8.h),
                               Text(
                                 skills[index]["name"]!,
                                 style: TextStyle(
