@@ -26,7 +26,7 @@ class Footer extends StatelessWidget {
               "Developed by Syed Ibrahim",
               style: TextStyle(
                 color: Colors.white60,
-                fontSize: 4.sp,
+                fontSize: 14,
                 fontFamily: "Source",
               ),
             ),
@@ -34,16 +34,12 @@ class Footer extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Icon(
-                  Icons.copyright_rounded,
-                  color: Colors.white60,
-                  size: 4.sp,
-                ),
+                Icon(Icons.copyright_rounded, color: Colors.white60, size: 20),
                 Text(
                   "All Right Reserved",
                   style: TextStyle(
                     color: Colors.white60,
-                    fontSize: 4.sp,
+                    fontSize: 14,
                     fontFamily: "Source",
                   ),
                 ),

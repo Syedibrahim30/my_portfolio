@@ -32,7 +32,7 @@ class Skills extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     int crossAxisCount = (screenWidth ~/ 150).clamp(2, 6);
     double spacing = 9.w;
-    double imageHeight = 60.h;
+    double imageHeight = .05.sh;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.center,
@@ -118,7 +118,7 @@ class Skills extends StatelessWidget {
                                 height: imageHeight,
                                 child: Image.asset(
                                   skills[index]["img"]!,
-                                  fit: BoxFit.contain,
+                                  fit: BoxFit.fill,
                                 ),
                               ),
                               Gap(8.h),

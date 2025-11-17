@@ -46,6 +46,8 @@ class ServicesPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    bool isMobile = MediaQuery.of(context).size.width < 600;
+
     return Column(
       children: [
         Text(
@@ -59,33 +61,42 @@ class ServicesPage extends StatelessWidget {
         ),
         Gap(30.h),
 
-        // --- LISTVIEW 2 PER ROW ---
         Padding(
           padding: EdgeInsets.symmetric(horizontal: .1.sw),
-          child: ListView.builder(
-            shrinkWrap: true,
-            physics: NeverScrollableScrollPhysics(),
-            itemCount: (services.length / 2).ceil(),
-            itemBuilder: (_, rowIndex) {
-              final int i1 = rowIndex * 2;
-              final int i2 = i1 + 1;
 
-              return IntrinsicHeight(
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.stretch,
-                  children: [
-                    Expanded(child: _serviceCard(i1)),
-                    Gap(6.w),
-                    Expanded(
-                      child: i2 < services.length
-                          ? _serviceCard(i2)
-                          : SizedBox(),
-                    ),
-                  ],
+          child: isMobile
+              // ---------------- MOBILE: LISTVIEW ----------------
+              ? ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: services.length,
+                  itemBuilder: (_, index) => _serviceCard(index),
+                )
+              // ----------- DESKTOP / TABLET: 2 PER ROW ----------
+              : ListView.builder(
+                  shrinkWrap: true,
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: (services.length / 2).ceil(),
+                  itemBuilder: (_, rowIndex) {
+                    final int i1 = rowIndex * 2;
+                    final int i2 = i1 + 1;
+
+                    return IntrinsicHeight(
+                      child: Row(
+                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                        children: [
+                          Expanded(child: _serviceCard(i1)),
+                          Gap(6.w),
+                          Expanded(
+                            child: i2 < services.length
+                                ? _serviceCard(i2)
+                                : SizedBox(),
+                          ),
+                        ],
+                      ),
+                    );
+                  },
                 ),
-              );
-            },
-          ),
         ),
       ],
     );

@@ -59,6 +59,8 @@ class Contact extends StatelessWidget {
                   await ctrl.myLaunchUrl(emailUri.toString());
                 },
                 child: HoverContainer(
+                  height: 80,
+                  weight: 300,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -81,6 +83,8 @@ class Contact extends StatelessWidget {
                 onTap: () =>
                     ctrl.myLaunchUrl('https://www.linkedin.com/in/syed30/'),
                 child: HoverContainer(
+                  height: 80,
+                  weight: 300,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -108,6 +112,8 @@ class Contact extends StatelessWidget {
                     ctrl.myLaunchUrl('hhttps://github.com/Syedibrahim30'),
 
                 child: HoverContainer(
+                  height: 80,
+                  weight: 300,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -135,6 +141,8 @@ class Contact extends StatelessWidget {
                   'https://wa.me/918838864641?text=Hi%20Mohammed!',
                 ),
                 child: HoverContainer(
+                  height: 80,
+                  weight: 300,
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [

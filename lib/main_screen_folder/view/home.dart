@@ -51,14 +51,14 @@ class Home extends StatelessWidget {
         ),
         Gap(10.h),
         Padding(
-          padding: EdgeInsets.symmetric(horizontal: .2.sw),
+          padding: EdgeInsets.symmetric(horizontal: .1.sw),
           child: Text(
             textAlign: TextAlign.center,
             "A passionate Flutter Developer crafting smooth, modern, and high-performance mobile apps.I specialize in building scalable UI, clean architecture, and delivering seamless user experiences.",
             style: TextStyle(
               fontFamily: "Source",
               color: Colors.white60,
-              fontSize: 26,
+              fontSize: 20,
             ),
           ),
         ),

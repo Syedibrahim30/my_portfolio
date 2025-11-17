@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:get/get.dart';
 import 'package:my_portfolio/main_screen_folder/controller/main_controller.dart';
 import 'package:my_portfolio/main_screen_folder/view/Skills.dart';
@@ -147,7 +146,7 @@ class MainScreenFile extends StatelessWidget {
                 child: Icon(
                   Icons.keyboard_arrow_up_outlined,
                   color: Color(0xfff4623a),
-                  size: 6.sp,
+                  size: 35,
                 ),
               )
             : SizedBox.shrink(),

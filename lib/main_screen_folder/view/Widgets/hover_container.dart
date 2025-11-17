@@ -5,9 +5,13 @@ class HoverContainer extends StatefulWidget {
   final Widget child;
 
   final Color color;
+  final double? height;
+  final double? weight;
 
   const HoverContainer({
     super.key,
+    this.height,
+    this.weight,
     required this.child,
 
     this.color = const Color(0xfff4623a),
@@ -26,8 +30,9 @@ class _HoverContainerState extends State<HoverContainer> {
       onEnter: (_) => setState(() => _hover = true),
       onExit: (_) => setState(() => _hover = false),
       child: AnimatedContainer(
+        height: widget.height,
+        width: widget.weight,
         duration: const Duration(milliseconds: 200),
-
         decoration: BoxDecoration(
           border: Border.all(color: Colors.white, width: 2),
           color: widget.color,
