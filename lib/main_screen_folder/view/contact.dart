@@ -121,7 +121,7 @@ class Contact extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () =>
-                    ctrl.myLaunchUrl('hhttps://github.com/Syedibrahim30'),
+                    ctrl.myLaunchUrl('https://github.com/Syedibrahim30'),
 
                 child: HoverContainer(
                   height: 80,
@@ -150,7 +150,7 @@ class Contact extends StatelessWidget {
               ),
               GestureDetector(
                 onTap: () => ctrl.myLaunchUrl(
-                  'https://wa.me/918838864641?text=Hi%20Mohammed!',
+                  'https://wa.me/918838864641?text=Hi%20Syed!',
                 ),
                 child: HoverContainer(
                   height: 80,
