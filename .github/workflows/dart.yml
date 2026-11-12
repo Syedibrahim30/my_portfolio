@@ -32,5 +32,5 @@ jobs:
       - name: Build web
         run: flutter build web --release
 
-      - name: Build App Bundle
-        run: flutter build appbundle --release
+#      - name: Build App Bundle
+#        run: flutter build appbundle --release
